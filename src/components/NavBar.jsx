@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./../logo.png";
+// import logo from "/logo.png";
 
 export default function NavBar() {
   return (
@@ -8,7 +8,7 @@ export default function NavBar() {
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="h-8 w-8" src={logo} alt="Workflow" />
+              <img class="h-8 w-8" src="/logo.png" alt="Workflow" />
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
