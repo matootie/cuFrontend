@@ -3,8 +3,8 @@ import React from "react";
 export default function Card(props) {
   const { recipeName, desc, ingredients } = props;
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center">
-      <div className="max-w-lg bg-white shadow-md rounded-lg overflow-hidden mx-auto">
+    <div className="m-8">
+      <div className="bg-white shadow-md rounded-lg overflow-hidden">
         <div className="py-4 px-8 mt-3">
           <div className="flex flex-col mb-8">
             <h2 className="text-gray-700 font-semibold text-2xl tracking-wide mb-2">
