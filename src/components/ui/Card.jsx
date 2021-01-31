@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../util/UserContext";
 
 export default function Card(props) {
   const { recipeName, desc, ingredients } = props;
+  const { recipes, fridge } = useContext(UserContext);
+
+  const [userRecipes, setUserRecipes] = recipes;
+
+  function getIngredients() {
+    return ingredients.map((index) => (
+      <span className="mb-1" key={index}>
+        {index}
+      </span>
+    ));
+  }
+
   return (
     <div className="m-8">
       <div className="bg-white shadow-md rounded-lg overflow-hidden">
@@ -15,22 +28,12 @@ export default function Card(props) {
           <div className="bg-gray-100 rounded-lg">
             <div className="py-4 px-4">
               <div className="flex flex-col">
-                <h4 className="text-lg font-semibold mb-3">
-                  Ingredients in your fridge
-                </h4>
+                <h4 className="text-lg font-semibold mb-3">Ingredients</h4>
                 <div className="flex flex-col text-sm text-gray-500">
-                  <span className="mb-1">{ingredients}</span>
+                  {getIngredients()}
                 </div>
               </div>
             </div>
-          </div>
-          <div className="py-4">
-            <a
-              href="#"
-              className="block tracking-widest uppercase text-center shadow bg-indigo-600 hover:bg-indigo-700 focus:shadow-outline focus:outline-none text-white text-xs py-3 px-10 rounded"
-            >
-              SAVE RECIPE
-            </a>
           </div>
         </div>
       </div>
