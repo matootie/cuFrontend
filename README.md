@@ -2,11 +2,19 @@
 
 This is a web app to help users make healthy food with ingredients they already have.
 
-## Website
+## Running Application
 
-[Go to the application] ()
+npm install
+
+npm start
+
+Go to http://localhost:3000
 
 In the project directory, run:
+
+## Video Demo
+
+https://drive.google.com/file/d/1LKomkXRh_qVhRDm4J584wC8S1GnFK80u/view?usp=sharing
 
 ### How Its Healthy
 
@@ -20,4 +28,4 @@ Users add items to their fridge, with the amount in grams. The contents of the f
 
 The backend is composed of a strapi api and MeiliSearch running in a docker container in a kubernetes cluster.
 
-[Backend Repo URL](https://github.com/nana-boateng/cuHackend)
+https://github.com/nana-boateng/cuHackend
