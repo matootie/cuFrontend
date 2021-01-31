@@ -16,9 +16,9 @@ export default function AddFridgeItem(){
     const [form] = Form.useForm();
     const [userFridge, setUserFridge] = fridge;
 
-    const addToFridge = ({value}) => {
-        console.log(newItem, newAmount)
-        setUserFridge(prevState => ({...prevState, value}))
+    const addToFridge = () => {
+        const newObj = {[newItem]: newAmount}
+        setUserFridge(prevState => ([...prevState, newObj]))
         openToast('success')
         setNewItem("")
         setNewAmount("")
@@ -39,10 +39,6 @@ export default function AddFridgeItem(){
         setShow(false)
     };
 
-    const onFinish = (values) => {
-        
-        console.log("here bitch")
-    };
 
     const inputStyle = "px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
 
@@ -59,7 +55,7 @@ export default function AddFridgeItem(){
                 <label for="amount">Amount: </label>
                 <input className={inputStyle} placeholder="Enter amount" id="amount" value={newAmount} onChange={(e) => setNewAmount(e.target.value)}></input>
                 <br></br><br></br>
-                <button type="primary" onClick={() => addToFridge({newItem: newAmount})}>
+                <button type="primary" onClick={() => addToFridge(newItem, newAmount)}>
                     Add To Fridge
                 </button>
             </Modal>

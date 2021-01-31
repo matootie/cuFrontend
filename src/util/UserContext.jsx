@@ -4,7 +4,7 @@ export const UserContext = createContext();
 
 export const UserProvider = (props) => {
   const [userRecipes, setUserRecipes] = useState({});
-  const [userFridge, setUserFridge] = useState({});
+  const [userFridge, setUserFridge] = useState([]);
 
   return (
     <UserContext.Provider
