@@ -30,11 +30,13 @@ export default function Home() {
 
     for (let i = 0; i < recipes.length; i++) {
       allRecipes.push(
-        <Card
-          recipeName={recipes[i].name}
-          desc={recipes[i].desc}
-          ingredients={recipes[i].ingredients}
-        />
+        <div className="w-1/3 p-2">
+          <Card
+            recipeName={recipes[i].name}
+            desc={recipes[i].desc}
+            ingredients={recipes[i].ingredients}
+          />
+        </div>
       );
     }
     return allRecipes;
@@ -48,34 +50,7 @@ export default function Home() {
           <Fridge />
         </div>
         <div className="flex flex-row flex-wrap w-full -m-2 p-7 max-w-5xl mx-auto">
-          <div className="w-1/3 p-2">
-            <Card
-              recipeName="Glass of milk"
-              desc="A meal so filling, its all Santa drinks!"
-              ingredients={["Milk"]}
-            />
-          </div>
-          <div className="w-1/3 p-2">
-            <Card
-              recipeName="Scrambled Eggs"
-              desc="Jus' need some butter!"
-              ingredients={["Eggs"]}
-            />
-          </div>
-          <div className="w-1/3 p-2">
-            <Card
-              recipeName="Toast"
-              desc="Jus' need some butter!"
-              ingredients={["Bread", "Toaster"]}
-            />
-          </div>
-          <div className="w-1/3 p-2">
-            <Card
-              recipeName="Burgers"
-              desc="Big ol' burgers to feed you!"
-              ingredients={["Bread", "Patty", "Secret Formula"]}
-            />
-          </div>
+          {getCards()}
         </div>
       </div>
     </div>
