@@ -13,10 +13,11 @@ export default function Home() {
       allRecipes.push(
         <div className="w-72 h-72">
           <Card
-            recipeName={recipes[i].name}
+            name={recipes[i].name}
             ingredients={Object.keys(recipes[i].ingredients)}
             score={recipes[i].score}
             verified={recipes[i].verified}
+            image={recipes[i].image.url}
           />
         </div>
       );

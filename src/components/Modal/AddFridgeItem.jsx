@@ -44,9 +44,9 @@ export default function AddFridgeItem(){
 
     return(
         <div className="w-full h-full p-2">
-            <Button className="w-full h-full" type="primary rounded-lg" onClick={() => showPopup()}>
+            <a className="block w-full h-full bg-blue-500 hover:bg-blue-700 transition rounded-lg px-2 py-3 text-white font-bold text-center" onClick={() => showPopup()}>
                 Open Fridge
-            </Button>
+            </a>
             <Modal title="Welcome to the Fridge" visible={show} onCancel={closePopup} footer={null}>
                 <label for="item">New Item: </label>
                 <input className={inputStyle} placeholder="Enter item" id="item" value={newItem} onChange={(e) => setNewItem(e.target.value)}></input>

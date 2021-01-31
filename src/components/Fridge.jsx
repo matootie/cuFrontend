@@ -26,7 +26,7 @@ export default function Fridge() {
   };
   return (
     <div className="flex flex-col h-full">
-      <h1 className="text-center py-4 text-2xl">My Fridge</h1>
+      <h1 className="text-center py-4 text-3xl">My Fridge</h1>
       <div className="flex flex-col bg-white h-72 md:h-full mx-3 rounded-lg overflow-scroll pt-2">
         {getFridgeItem()}
       </div>
