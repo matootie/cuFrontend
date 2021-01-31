@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { UserContext } from "../../util/UserContext";
+import { HiCheckCircle } from "react-icons/hi";
 
 export default function Card(props) {
-  const { recipeName, desc, ingredients } = props;
+  const { name, ingredients, score, verified } = props;
   const { recipes } = useContext(UserContext);
 
   const [userRecipes, setUserRecipes] = recipes;
@@ -16,24 +17,15 @@ export default function Card(props) {
   }
 
   return (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden h-full">
-      <div className="py-4 px-8 mt-3">
-        <div className="flex flex-col mb-8">
-          <h2 className="text-gray-700 font-semibold text-2xl tracking-wide mb-2">
-            {recipeName}
-          </h2>
-          <p className="text-gray-500 text-base">{desc}</p>
-        </div>
-        <div className="bg-gray-100 rounded-lg">
-          <div className="py-4 px-4">
-            <div className="flex flex-col">
-              <h4 className="text-lg font-semibold mb-3">Ingredients</h4>
-              <div className="flex flex-col text-sm text-gray-500">
-                {getIngredients()}
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="h-full p-2">
+      <div
+        className={`${
+          score == 1 ? "ring-4" : "ring-0"
+        } ring-green-500 bg-white shadow-md rounded-lg h-full transform hover:-translate-y-1 transition`}
+      >
+        {verified && (
+          <HiCheckCircle className="text-4xl bg-white rounded-full text-blue-500 absolute -top-2 -right-2" />
+        )}
       </div>
     </div>
   );
