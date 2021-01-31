@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 import Fridge from "../components/Fridge";
 import Card from "./../components/ui/Card";
 
