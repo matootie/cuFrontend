@@ -2,8 +2,9 @@ import React, { useContext } from "react";
 import { UserContext } from "../../util/UserContext";
 
 export default function Card(props) {
-  const { recipeName, ingredients } = props;
-  const { recipes, fridge } = useContext(UserContext);
+
+  const { recipeName, desc, ingredients } = props;
+  const { recipes } = useContext(UserContext);
 
   const [userRecipes, setUserRecipes] = recipes;
 

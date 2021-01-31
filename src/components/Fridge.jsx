@@ -4,9 +4,7 @@ import AddFridgeItem from "./Modal/AddFridgeItem";
 
 import { UserContext } from "./../util/UserContext";
 
-
 export default function Fridge() {
-
   const { recipe, fridge } = useContext(UserContext);
   const [userFridge, setUserFridge] = fridge;
 
@@ -23,8 +21,6 @@ export default function Fridge() {
       </span>
     ));
   };
-  
-
   return (
     <div className="flex flex-col justify-between">
       <div className="flex flex-row flex-wrap ">
@@ -40,5 +36,3 @@ export default function Fridge() {
     </div>
   );
 }
-
-
