@@ -3,7 +3,7 @@ import { UserContext } from "../../util/UserContext";
 
 export default function Card(props) {
   const { recipeName, desc, ingredients } = props;
-  const { recipes, fridge } = useContext(UserContext);
+  const { recipes } = useContext(UserContext);
 
   const [userRecipes, setUserRecipes] = recipes;
 
@@ -24,6 +24,9 @@ export default function Card(props) {
               {recipeName}
             </h2>
             <p className="text-gray-500 text-base">{desc}</p>
+          </div>
+          <div className="justify-items-center">
+            <img className="w-32 h-32"></img>
           </div>
           <div className="bg-gray-100 rounded-lg">
             <div className="py-4 px-4">
