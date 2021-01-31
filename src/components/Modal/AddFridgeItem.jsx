@@ -43,8 +43,8 @@ export default function AddFridgeItem(){
     const inputStyle = "px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full"
 
     return(
-        <div>
-            <Button type="primary" onClick={() => showPopup()}>
+        <div className="w-full h-full p-2">
+            <Button className="w-full h-full" type="primary rounded-lg" onClick={() => showPopup()}>
                 Open Fridge
             </Button>
             <Modal title="Welcome to the Fridge" visible={show} onCancel={closePopup} footer={null}>
